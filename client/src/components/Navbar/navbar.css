@@ -1,0 +1,108 @@
+:root {
+  --bg-color-nav: #212b36;
+  --white-color: #fff;
+  --bxShade: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.navbar {
+  background-color: var(--bg-color-nav);
+  width: 290px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.navbar::-webkit-scrollbar {
+  width: 5px;
+}
+.navbar::-webkit-scrollbar-button {
+  background-color: rgb(47, 46, 46);
+}
+.navbar::-webkit-scrollbar-thumb {
+  background-color: rgb(202, 202, 202);
+  border-radius: 20px;
+}
+.school__Name-display {
+  padding: 0.6rem;
+  box-shadow: var(--bxShade);
+  margin-bottom: 0.9rem;
+  & h4 {
+    line-height: 1.5rem;
+    color: var(--white-color);
+    font-size: 1rem;
+    user-select: none;
+    text-align: center;
+  }
+}
+
+/* LINKS */
+.nav__btn-links {
+  margin-top: 2rem;
+  padding: 0 0.9rem;
+
+  & li {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0.9rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 2px;
+    color: #dfddddf6;
+    list-style: none;
+    & a {
+      color: #dfddddf6;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: #f5f5f5ae;
+      color: #212b36;
+    }
+    &:hover a {
+      color: #212b36;
+    }
+  }
+}
+
+/* TOP NAVBAR */
+.topNav {
+  background-color: var(--white-color);
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  gap: 4rem;
+  z-index: 9090;
+  & span {
+    font-size: 1.3rem;
+
+    &.notify {
+      color: var(--bg-color-nav);
+    }
+  }
+  & .profile__info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    & .profile__icon {
+      width: 30px;
+      height: 30px;
+      background-color: #00000075;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: var(--white-color);
+    }
+    & .username {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+}
