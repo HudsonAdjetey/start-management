@@ -1,0 +1,122 @@
+/* TABLE */
+.table__container {
+  margin-top: 7rem;
+  padding: 1rem 2rem;
+}
+
+/* TABLE INPUT SEARCH */
+.table__input-search {
+  height: 40px;
+  width: 50%;
+
+  & input {
+    width: calc(100% - 90px);
+    height: inherit;
+    outline: none;
+    border: 2px solid #7d71db5a;
+    border-radius: 4px;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.table {
+  width: 100%;
+  margin: 2rem auto;
+  height: auto;
+  overflow: hidden;
+  border-collapse: collapse;
+  box-shadow: 1px 2px 1px 0.5px rgba(209, 209, 209, 0.25);
+
+  & tr {
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  & th {
+    background-color: rgba(243, 243, 243, 0.863);
+    box-shadow: 1px 2px 1px 0.5px rgba(209, 209, 209, 0.25);
+    padding: 10px 4px;
+  }
+  & td {
+    text-align: center;
+    position: relative;
+    padding: 17px 4px;
+    border-bottom: 1px solid rgba(230 230 230 / 0.718);
+    & a {
+      color: #000;
+      width: 100%;
+    }
+    &:hover:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -9999px;
+      bottom: -9999px;
+      background-color: rgba(98, 98, 98, 0.2);
+      z-index: -1;
+    }
+  }
+}
+
+/* TABLE THEME */
+
+.table__container.light > .table {
+  background-color: #f8f8f8b5;
+}
+.table__container.dark > .table {
+  background-color: #f8f8f8b5;
+}
+/* TABLE THEME */
+
+/* PAGINATION */
+ul[role="navigation"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+
+  & li.previous,
+  & li.next {
+    width: 90px;
+    background-color: #ababac;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  & li.disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+  & li a {
+    padding: 0 10px !important;
+    margin: auto;
+    display: block;
+    min-width: 30px;
+    max-width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color: inherit;
+  }
+  & li.selected {
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    border-radius: 50%;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8b5;
+  }
+}
