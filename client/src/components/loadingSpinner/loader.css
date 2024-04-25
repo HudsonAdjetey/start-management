@@ -1,0 +1,13 @@
+.preloader {
+  background-color: rgba(67, 132, 186, 0.436);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+}
